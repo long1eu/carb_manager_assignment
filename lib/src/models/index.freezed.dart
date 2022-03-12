@@ -40,14 +40,12 @@ mixin _$AppState {
   Set<String> get pending => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AppStateCopyWith<AppState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppStateCopyWith<AppState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AppStateCopyWith<$Res> {
-  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) =
-      _$AppStateCopyWithImpl<$Res>;
+  factory $AppStateCopyWith(AppState value, $Res Function(AppState) then) = _$AppStateCopyWithImpl<$Res>;
   $Res call({AuthState auth, RecipesState recipes, Set<String> pending});
 
   $AuthStateCopyWith<$Res> get auth;
@@ -101,8 +99,7 @@ class _$AppStateCopyWithImpl<$Res> implements $AppStateCopyWith<$Res> {
 
 /// @nodoc
 abstract class $AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
-  factory $AppState$CopyWith(AppState$ value, $Res Function(AppState$) then) =
-      _$AppState$CopyWithImpl<$Res>;
+  factory $AppState$CopyWith(AppState$ value, $Res Function(AppState$) then) = _$AppState$CopyWithImpl<$Res>;
   @override
   $Res call({AuthState auth, RecipesState recipes, Set<String> pending});
 
@@ -113,8 +110,7 @@ abstract class $AppState$CopyWith<$Res> implements $AppStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
-    implements $AppState$CopyWith<$Res> {
+class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res> implements $AppState$CopyWith<$Res> {
   _$AppState$CopyWithImpl(AppState$ _value, $Res Function(AppState$) _then)
       : super(_value, (v) => _then(v as AppState$));
 
@@ -148,9 +144,7 @@ class _$AppState$CopyWithImpl<$Res> extends _$AppStateCopyWithImpl<$Res>
 
 class _$AppState$ implements AppState$ {
   const _$AppState$(
-      {this.auth = const AuthState(),
-      this.recipes = const RecipesState(),
-      this.pending = const <String>{}});
+      {this.auth = const AuthState(), this.recipes = const RecipesState(), this.pending = const <String>{}});
 
   @JsonKey()
   @override
@@ -178,23 +172,16 @@ class _$AppState$ implements AppState$ {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(auth),
-      const DeepCollectionEquality().hash(recipes),
-      const DeepCollectionEquality().hash(pending));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(auth),
+      const DeepCollectionEquality().hash(recipes), const DeepCollectionEquality().hash(pending));
 
   @JsonKey(ignore: true)
   @override
-  $AppState$CopyWith<AppState$> get copyWith =>
-      _$AppState$CopyWithImpl<AppState$>(this, _$identity);
+  $AppState$CopyWith<AppState$> get copyWith => _$AppState$CopyWithImpl<AppState$>(this, _$identity);
 }
 
 abstract class AppState$ implements AppState {
-  const factory AppState$(
-      {AuthState auth,
-      RecipesState recipes,
-      Set<String> pending}) = _$AppState$;
+  const factory AppState$({AuthState auth, RecipesState recipes, Set<String> pending}) = _$AppState$;
 
   @override
   AuthState get auth;
@@ -204,8 +191,7 @@ abstract class AppState$ implements AppState {
   Set<String> get pending;
   @override
   @JsonKey(ignore: true)
-  $AppState$CopyWith<AppState$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppState$CopyWith<AppState$> get copyWith => throw _privateConstructorUsedError;
 }
 
 AppUser _$AppUserFromJson(Map<String, dynamic> json) {
@@ -217,10 +203,7 @@ class _$AppUserTearOff {
   const _$AppUserTearOff();
 
   AppUser$ call(
-      {required String firstName,
-      required String lastName,
-      required String email,
-      required String energyUnits}) {
+      {required String firstName, required String lastName, required String email, required String energyUnits}) {
     return AppUser$(
       firstName: firstName,
       lastName: lastName,
@@ -251,10 +234,8 @@ mixin _$AppUser {
 
 /// @nodoc
 abstract class $AppUserCopyWith<$Res> {
-  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) =
-      _$AppUserCopyWithImpl<$Res>;
-  $Res call(
-      {String firstName, String lastName, String email, String energyUnits});
+  factory $AppUserCopyWith(AppUser value, $Res Function(AppUser) then) = _$AppUserCopyWithImpl<$Res>;
+  $Res call({String firstName, String lastName, String email, String energyUnits});
 }
 
 /// @nodoc
@@ -295,18 +276,14 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
 
 /// @nodoc
 abstract class $AppUser$CopyWith<$Res> implements $AppUserCopyWith<$Res> {
-  factory $AppUser$CopyWith(AppUser$ value, $Res Function(AppUser$) then) =
-      _$AppUser$CopyWithImpl<$Res>;
+  factory $AppUser$CopyWith(AppUser$ value, $Res Function(AppUser$) then) = _$AppUser$CopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String firstName, String lastName, String email, String energyUnits});
+  $Res call({String firstName, String lastName, String email, String energyUnits});
 }
 
 /// @nodoc
-class _$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
-    implements $AppUser$CopyWith<$Res> {
-  _$AppUser$CopyWithImpl(AppUser$ _value, $Res Function(AppUser$) _then)
-      : super(_value, (v) => _then(v as AppUser$));
+class _$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res> implements $AppUser$CopyWith<$Res> {
+  _$AppUser$CopyWithImpl(AppUser$ _value, $Res Function(AppUser$) _then) : super(_value, (v) => _then(v as AppUser$));
 
   @override
   AppUser$ get _value => super._value as AppUser$;
@@ -342,14 +319,9 @@ class _$AppUser$CopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$AppUser$ implements AppUser$ {
-  const _$AppUser$(
-      {required this.firstName,
-      required this.lastName,
-      required this.email,
-      required this.energyUnits});
+  const _$AppUser$({required this.firstName, required this.lastName, required this.email, required this.energyUnits});
 
-  factory _$AppUser$.fromJson(Map<String, dynamic> json) =>
-      _$$AppUser$FromJson(json);
+  factory _$AppUser$.fromJson(Map<String, dynamic> json) => _$$AppUser$FromJson(json);
 
   @override
   final String firstName;
@@ -373,8 +345,7 @@ class _$AppUser$ implements AppUser$ {
             const DeepCollectionEquality().equals(other.firstName, firstName) &&
             const DeepCollectionEquality().equals(other.lastName, lastName) &&
             const DeepCollectionEquality().equals(other.email, email) &&
-            const DeepCollectionEquality()
-                .equals(other.energyUnits, energyUnits));
+            const DeepCollectionEquality().equals(other.energyUnits, energyUnits));
   }
 
   @override
@@ -387,8 +358,7 @@ class _$AppUser$ implements AppUser$ {
 
   @JsonKey(ignore: true)
   @override
-  $AppUser$CopyWith<AppUser$> get copyWith =>
-      _$AppUser$CopyWithImpl<AppUser$>(this, _$identity);
+  $AppUser$CopyWith<AppUser$> get copyWith => _$AppUser$CopyWithImpl<AppUser$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -415,8 +385,7 @@ abstract class AppUser$ implements AppUser {
   String get energyUnits;
   @override
   @JsonKey(ignore: true)
-  $AppUser$CopyWith<AppUser$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AppUser$CopyWith<AppUser$> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -438,14 +407,12 @@ mixin _$AuthState {
   AppUser? get user => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $AuthStateCopyWith<AuthState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AuthStateCopyWith<AuthState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AuthStateCopyWith<$Res> {
-  factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) =
-      _$AuthStateCopyWithImpl<$Res>;
+  factory $AuthStateCopyWith(AuthState value, $Res Function(AuthState) then) = _$AuthStateCopyWithImpl<$Res>;
   $Res call({AppUser? user});
 
   $AppUserCopyWith<$Res>? get user;
@@ -485,9 +452,7 @@ class _$AuthStateCopyWithImpl<$Res> implements $AuthStateCopyWith<$Res> {
 
 /// @nodoc
 abstract class $AuthState$CopyWith<$Res> implements $AuthStateCopyWith<$Res> {
-  factory $AuthState$CopyWith(
-          AuthState$ value, $Res Function(AuthState$) then) =
-      _$AuthState$CopyWithImpl<$Res>;
+  factory $AuthState$CopyWith(AuthState$ value, $Res Function(AuthState$) then) = _$AuthState$CopyWithImpl<$Res>;
   @override
   $Res call({AppUser? user});
 
@@ -496,8 +461,7 @@ abstract class $AuthState$CopyWith<$Res> implements $AuthStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AuthState$CopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res>
-    implements $AuthState$CopyWith<$Res> {
+class _$AuthState$CopyWithImpl<$Res> extends _$AuthStateCopyWithImpl<$Res> implements $AuthState$CopyWith<$Res> {
   _$AuthState$CopyWithImpl(AuthState$ _value, $Res Function(AuthState$) _then)
       : super(_value, (v) => _then(v as AuthState$));
 
@@ -539,13 +503,11 @@ class _$AuthState$ implements AuthState$ {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(user));
 
   @JsonKey(ignore: true)
   @override
-  $AuthState$CopyWith<AuthState$> get copyWith =>
-      _$AuthState$CopyWithImpl<AuthState$>(this, _$identity);
+  $AuthState$CopyWith<AuthState$> get copyWith => _$AuthState$CopyWithImpl<AuthState$>(this, _$identity);
 }
 
 abstract class AuthState$ implements AuthState {
@@ -555,8 +517,7 @@ abstract class AuthState$ implements AuthState {
   AppUser? get user;
   @override
   @JsonKey(ignore: true)
-  $AuthState$CopyWith<AuthState$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AuthState$CopyWith<AuthState$> get copyWith => throw _privateConstructorUsedError;
 }
 
 Recipe _$RecipeFromJson(Map<String, dynamic> json) {
@@ -623,8 +584,7 @@ mixin _$Recipe {
 
 /// @nodoc
 abstract class $RecipeCopyWith<$Res> {
-  factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) then) =
-      _$RecipeCopyWithImpl<$Res>;
+  factory $RecipeCopyWith(Recipe value, $Res Function(Recipe) then) = _$RecipeCopyWithImpl<$Res>;
   $Res call(
       {String id,
       bool isPremium,
@@ -729,8 +689,7 @@ class _$RecipeCopyWithImpl<$Res> implements $RecipeCopyWith<$Res> {
 
 /// @nodoc
 abstract class $Recipe$CopyWith<$Res> implements $RecipeCopyWith<$Res> {
-  factory $Recipe$CopyWith(Recipe$ value, $Res Function(Recipe$) then) =
-      _$Recipe$CopyWithImpl<$Res>;
+  factory $Recipe$CopyWith(Recipe$ value, $Res Function(Recipe$) then) = _$Recipe$CopyWithImpl<$Res>;
   @override
   $Res call(
       {String id,
@@ -752,10 +711,8 @@ abstract class $Recipe$CopyWith<$Res> implements $RecipeCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$Recipe$CopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res>
-    implements $Recipe$CopyWith<$Res> {
-  _$Recipe$CopyWithImpl(Recipe$ _value, $Res Function(Recipe$) _then)
-      : super(_value, (v) => _then(v as Recipe$));
+class _$Recipe$CopyWithImpl<$Res> extends _$RecipeCopyWithImpl<$Res> implements $Recipe$CopyWith<$Res> {
+  _$Recipe$CopyWithImpl(Recipe$ _value, $Res Function(Recipe$) _then) : super(_value, (v) => _then(v as Recipe$));
 
   @override
   Recipe$ get _value => super._value as Recipe$;
@@ -840,8 +797,7 @@ class _$Recipe$ extends Recipe$ {
       this.isLiked = false})
       : super._();
 
-  factory _$Recipe$.fromJson(Map<String, dynamic> json) =>
-      _$$Recipe$FromJson(json);
+  factory _$Recipe$.fromJson(Map<String, dynamic> json) => _$$Recipe$FromJson(json);
 
   @override
   final String id;
@@ -879,16 +835,14 @@ class _$Recipe$ extends Recipe$ {
             other is Recipe$ &&
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
-            const DeepCollectionEquality()
-                .equals(other.isPublished, isPublished) &&
+            const DeepCollectionEquality().equals(other.isPublished, isPublished) &&
             const DeepCollectionEquality().equals(other.isDeleted, isDeleted) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality().equals(other.images, images) &&
             const DeepCollectionEquality().equals(other.rating, rating) &&
             const DeepCollectionEquality().equals(other.details, details) &&
-            const DeepCollectionEquality()
-                .equals(other.preparationTimeMinutes, preparationTimeMinutes) &&
+            const DeepCollectionEquality().equals(other.preparationTimeMinutes, preparationTimeMinutes) &&
             const DeepCollectionEquality().equals(other.isLiked, isLiked));
   }
 
@@ -909,8 +863,7 @@ class _$Recipe$ extends Recipe$ {
 
   @JsonKey(ignore: true)
   @override
-  $Recipe$CopyWith<Recipe$> get copyWith =>
-      _$Recipe$CopyWithImpl<Recipe$>(this, _$identity);
+  $Recipe$CopyWith<Recipe$> get copyWith => _$Recipe$CopyWithImpl<Recipe$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -992,15 +945,12 @@ mixin _$RecipeImage {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecipeImageCopyWith<RecipeImage> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeImageCopyWith<RecipeImage> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecipeImageCopyWith<$Res> {
-  factory $RecipeImageCopyWith(
-          RecipeImage value, $Res Function(RecipeImage) then) =
-      _$RecipeImageCopyWithImpl<$Res>;
+  factory $RecipeImageCopyWith(RecipeImage value, $Res Function(RecipeImage) then) = _$RecipeImageCopyWithImpl<$Res>;
   $Res call({String id, String url});
 }
 
@@ -1031,20 +981,16 @@ class _$RecipeImageCopyWithImpl<$Res> implements $RecipeImageCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $RecipeImage$CopyWith<$Res>
-    implements $RecipeImageCopyWith<$Res> {
-  factory $RecipeImage$CopyWith(
-          RecipeImage$ value, $Res Function(RecipeImage$) then) =
+abstract class $RecipeImage$CopyWith<$Res> implements $RecipeImageCopyWith<$Res> {
+  factory $RecipeImage$CopyWith(RecipeImage$ value, $Res Function(RecipeImage$) then) =
       _$RecipeImage$CopyWithImpl<$Res>;
   @override
   $Res call({String id, String url});
 }
 
 /// @nodoc
-class _$RecipeImage$CopyWithImpl<$Res> extends _$RecipeImageCopyWithImpl<$Res>
-    implements $RecipeImage$CopyWith<$Res> {
-  _$RecipeImage$CopyWithImpl(
-      RecipeImage$ _value, $Res Function(RecipeImage$) _then)
+class _$RecipeImage$CopyWithImpl<$Res> extends _$RecipeImageCopyWithImpl<$Res> implements $RecipeImage$CopyWith<$Res> {
+  _$RecipeImage$CopyWithImpl(RecipeImage$ _value, $Res Function(RecipeImage$) _then)
       : super(_value, (v) => _then(v as RecipeImage$));
 
   @override
@@ -1073,8 +1019,7 @@ class _$RecipeImage$CopyWithImpl<$Res> extends _$RecipeImageCopyWithImpl<$Res>
 class _$RecipeImage$ implements RecipeImage$ {
   const _$RecipeImage$({required this.id, required this.url});
 
-  factory _$RecipeImage$.fromJson(Map<String, dynamic> json) =>
-      _$$RecipeImage$FromJson(json);
+  factory _$RecipeImage$.fromJson(Map<String, dynamic> json) => _$$RecipeImage$FromJson(json);
 
   @override
   final String id;
@@ -1096,15 +1041,12 @@ class _$RecipeImage$ implements RecipeImage$ {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(url));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(id), const DeepCollectionEquality().hash(url));
 
   @JsonKey(ignore: true)
   @override
-  $RecipeImage$CopyWith<RecipeImage$> get copyWith =>
-      _$RecipeImage$CopyWithImpl<RecipeImage$>(this, _$identity);
+  $RecipeImage$CopyWith<RecipeImage$> get copyWith => _$RecipeImage$CopyWithImpl<RecipeImage$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1113,11 +1055,9 @@ class _$RecipeImage$ implements RecipeImage$ {
 }
 
 abstract class RecipeImage$ implements RecipeImage {
-  const factory RecipeImage$({required String id, required String url}) =
-      _$RecipeImage$;
+  const factory RecipeImage$({required String id, required String url}) = _$RecipeImage$;
 
-  factory RecipeImage$.fromJson(Map<String, dynamic> json) =
-      _$RecipeImage$.fromJson;
+  factory RecipeImage$.fromJson(Map<String, dynamic> json) = _$RecipeImage$.fromJson;
 
   @override
   String get id;
@@ -1125,8 +1065,7 @@ abstract class RecipeImage$ implements RecipeImage {
   String get url;
   @override
   @JsonKey(ignore: true)
-  $RecipeImage$CopyWith<RecipeImage$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeImage$CopyWith<RecipeImage$> get copyWith => throw _privateConstructorUsedError;
 }
 
 Rating _$RatingFromJson(Map<String, dynamic> json) {
@@ -1164,8 +1103,7 @@ mixin _$Rating {
 
 /// @nodoc
 abstract class $RatingCopyWith<$Res> {
-  factory $RatingCopyWith(Rating value, $Res Function(Rating) then) =
-      _$RatingCopyWithImpl<$Res>;
+  factory $RatingCopyWith(Rating value, $Res Function(Rating) then) = _$RatingCopyWithImpl<$Res>;
   $Res call({int count, double score});
 }
 
@@ -1197,17 +1135,14 @@ class _$RatingCopyWithImpl<$Res> implements $RatingCopyWith<$Res> {
 
 /// @nodoc
 abstract class $Rating$CopyWith<$Res> implements $RatingCopyWith<$Res> {
-  factory $Rating$CopyWith(Rating$ value, $Res Function(Rating$) then) =
-      _$Rating$CopyWithImpl<$Res>;
+  factory $Rating$CopyWith(Rating$ value, $Res Function(Rating$) then) = _$Rating$CopyWithImpl<$Res>;
   @override
   $Res call({int count, double score});
 }
 
 /// @nodoc
-class _$Rating$CopyWithImpl<$Res> extends _$RatingCopyWithImpl<$Res>
-    implements $Rating$CopyWith<$Res> {
-  _$Rating$CopyWithImpl(Rating$ _value, $Res Function(Rating$) _then)
-      : super(_value, (v) => _then(v as Rating$));
+class _$Rating$CopyWithImpl<$Res> extends _$RatingCopyWithImpl<$Res> implements $Rating$CopyWith<$Res> {
+  _$Rating$CopyWithImpl(Rating$ _value, $Res Function(Rating$) _then) : super(_value, (v) => _then(v as Rating$));
 
   @override
   Rating$ get _value => super._value as Rating$;
@@ -1235,8 +1170,7 @@ class _$Rating$CopyWithImpl<$Res> extends _$RatingCopyWithImpl<$Res>
 class _$Rating$ implements Rating$ {
   const _$Rating$({required this.count, required this.score});
 
-  factory _$Rating$.fromJson(Map<String, dynamic> json) =>
-      _$$Rating$FromJson(json);
+  factory _$Rating$.fromJson(Map<String, dynamic> json) => _$$Rating$FromJson(json);
 
   @override
   final int count;
@@ -1258,15 +1192,12 @@ class _$Rating$ implements Rating$ {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(count),
-      const DeepCollectionEquality().hash(score));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(count), const DeepCollectionEquality().hash(score));
 
   @JsonKey(ignore: true)
   @override
-  $Rating$CopyWith<Rating$> get copyWith =>
-      _$Rating$CopyWithImpl<Rating$>(this, _$identity);
+  $Rating$CopyWith<Rating$> get copyWith => _$Rating$CopyWithImpl<Rating$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1275,8 +1206,7 @@ class _$Rating$ implements Rating$ {
 }
 
 abstract class Rating$ implements Rating {
-  const factory Rating$({required int count, required double score}) =
-      _$Rating$;
+  const factory Rating$({required int count, required double score}) = _$Rating$;
 
   factory Rating$.fromJson(Map<String, dynamic> json) = _$Rating$.fromJson;
 
@@ -1325,27 +1255,21 @@ mixin _$RecipeDetails {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecipeDetailsCopyWith<RecipeDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeDetailsCopyWith<RecipeDetails> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecipeDetailsCopyWith<$Res> {
-  factory $RecipeDetailsCopyWith(
-          RecipeDetails value, $Res Function(RecipeDetails) then) =
+  factory $RecipeDetailsCopyWith(RecipeDetails value, $Res Function(RecipeDetails) then) =
       _$RecipeDetailsCopyWithImpl<$Res>;
-  $Res call(
-      {RecipeUnits units,
-      RecipeNutrients nutrients,
-      @JsonKey(name: 'energy') int energyValue});
+  $Res call({RecipeUnits units, RecipeNutrients nutrients, @JsonKey(name: 'energy') int energyValue});
 
   $RecipeUnitsCopyWith<$Res> get units;
   $RecipeNutrientsCopyWith<$Res> get nutrients;
 }
 
 /// @nodoc
-class _$RecipeDetailsCopyWithImpl<$Res>
-    implements $RecipeDetailsCopyWith<$Res> {
+class _$RecipeDetailsCopyWithImpl<$Res> implements $RecipeDetailsCopyWith<$Res> {
   _$RecipeDetailsCopyWithImpl(this._value, this._then);
 
   final RecipeDetails _value;
@@ -1390,16 +1314,11 @@ class _$RecipeDetailsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $RecipeDetails$CopyWith<$Res>
-    implements $RecipeDetailsCopyWith<$Res> {
-  factory $RecipeDetails$CopyWith(
-          RecipeDetails$ value, $Res Function(RecipeDetails$) then) =
+abstract class $RecipeDetails$CopyWith<$Res> implements $RecipeDetailsCopyWith<$Res> {
+  factory $RecipeDetails$CopyWith(RecipeDetails$ value, $Res Function(RecipeDetails$) then) =
       _$RecipeDetails$CopyWithImpl<$Res>;
   @override
-  $Res call(
-      {RecipeUnits units,
-      RecipeNutrients nutrients,
-      @JsonKey(name: 'energy') int energyValue});
+  $Res call({RecipeUnits units, RecipeNutrients nutrients, @JsonKey(name: 'energy') int energyValue});
 
   @override
   $RecipeUnitsCopyWith<$Res> get units;
@@ -1408,11 +1327,9 @@ abstract class $RecipeDetails$CopyWith<$Res>
 }
 
 /// @nodoc
-class _$RecipeDetails$CopyWithImpl<$Res>
-    extends _$RecipeDetailsCopyWithImpl<$Res>
+class _$RecipeDetails$CopyWithImpl<$Res> extends _$RecipeDetailsCopyWithImpl<$Res>
     implements $RecipeDetails$CopyWith<$Res> {
-  _$RecipeDetails$CopyWithImpl(
-      RecipeDetails$ _value, $Res Function(RecipeDetails$) _then)
+  _$RecipeDetails$CopyWithImpl(RecipeDetails$ _value, $Res Function(RecipeDetails$) _then)
       : super(_value, (v) => _then(v as RecipeDetails$));
 
   @override
@@ -1445,13 +1362,10 @@ class _$RecipeDetails$CopyWithImpl<$Res>
 @JsonSerializable()
 class _$RecipeDetails$ extends RecipeDetails$ {
   const _$RecipeDetails$(
-      {required this.units,
-      required this.nutrients,
-      @JsonKey(name: 'energy') required this.energyValue})
+      {required this.units, required this.nutrients, @JsonKey(name: 'energy') required this.energyValue})
       : super._();
 
-  factory _$RecipeDetails$.fromJson(Map<String, dynamic> json) =>
-      _$$RecipeDetails$FromJson(json);
+  factory _$RecipeDetails$.fromJson(Map<String, dynamic> json) => _$$RecipeDetails$FromJson(json);
 
   @override
   final RecipeUnits units;
@@ -1473,16 +1387,12 @@ class _$RecipeDetails$ extends RecipeDetails$ {
             other is RecipeDetails$ &&
             const DeepCollectionEquality().equals(other.units, units) &&
             const DeepCollectionEquality().equals(other.nutrients, nutrients) &&
-            const DeepCollectionEquality()
-                .equals(other.energyValue, energyValue));
+            const DeepCollectionEquality().equals(other.energyValue, energyValue));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(units),
-      const DeepCollectionEquality().hash(nutrients),
-      const DeepCollectionEquality().hash(energyValue));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(units),
+      const DeepCollectionEquality().hash(nutrients), const DeepCollectionEquality().hash(energyValue));
 
   @JsonKey(ignore: true)
   @override
@@ -1502,8 +1412,7 @@ abstract class RecipeDetails$ extends RecipeDetails {
       @JsonKey(name: 'energy') required int energyValue}) = _$RecipeDetails$;
   const RecipeDetails$._() : super._();
 
-  factory RecipeDetails$.fromJson(Map<String, dynamic> json) =
-      _$RecipeDetails$.fromJson;
+  factory RecipeDetails$.fromJson(Map<String, dynamic> json) = _$RecipeDetails$.fromJson;
 
   @override
   RecipeUnits get units;
@@ -1514,8 +1423,7 @@ abstract class RecipeDetails$ extends RecipeDetails {
   int get energyValue;
   @override
   @JsonKey(ignore: true)
-  $RecipeDetails$CopyWith<RecipeDetails$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeDetails$CopyWith<RecipeDetails$> get copyWith => throw _privateConstructorUsedError;
 }
 
 RecipeUnits _$RecipeUnitsFromJson(Map<String, dynamic> json) {
@@ -1565,23 +1473,13 @@ mixin _$RecipeUnits {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecipeUnitsCopyWith<RecipeUnits> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeUnitsCopyWith<RecipeUnits> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecipeUnitsCopyWith<$Res> {
-  factory $RecipeUnitsCopyWith(
-          RecipeUnits value, $Res Function(RecipeUnits) then) =
-      _$RecipeUnitsCopyWithImpl<$Res>;
-  $Res call(
-      {String proteins,
-      String carbs,
-      String fats,
-      String energy,
-      String ca,
-      String mg,
-      String fe});
+  factory $RecipeUnitsCopyWith(RecipeUnits value, $Res Function(RecipeUnits) then) = _$RecipeUnitsCopyWithImpl<$Res>;
+  $Res call({String proteins, String carbs, String fats, String energy, String ca, String mg, String fe});
 }
 
 /// @nodoc
@@ -1636,27 +1534,16 @@ class _$RecipeUnitsCopyWithImpl<$Res> implements $RecipeUnitsCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $RecipeUnits$CopyWith<$Res>
-    implements $RecipeUnitsCopyWith<$Res> {
-  factory $RecipeUnits$CopyWith(
-          RecipeUnits$ value, $Res Function(RecipeUnits$) then) =
+abstract class $RecipeUnits$CopyWith<$Res> implements $RecipeUnitsCopyWith<$Res> {
+  factory $RecipeUnits$CopyWith(RecipeUnits$ value, $Res Function(RecipeUnits$) then) =
       _$RecipeUnits$CopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String proteins,
-      String carbs,
-      String fats,
-      String energy,
-      String ca,
-      String mg,
-      String fe});
+  $Res call({String proteins, String carbs, String fats, String energy, String ca, String mg, String fe});
 }
 
 /// @nodoc
-class _$RecipeUnits$CopyWithImpl<$Res> extends _$RecipeUnitsCopyWithImpl<$Res>
-    implements $RecipeUnits$CopyWith<$Res> {
-  _$RecipeUnits$CopyWithImpl(
-      RecipeUnits$ _value, $Res Function(RecipeUnits$) _then)
+class _$RecipeUnits$CopyWithImpl<$Res> extends _$RecipeUnitsCopyWithImpl<$Res> implements $RecipeUnits$CopyWith<$Res> {
+  _$RecipeUnits$CopyWithImpl(RecipeUnits$ _value, $Res Function(RecipeUnits$) _then)
       : super(_value, (v) => _then(v as RecipeUnits$));
 
   @override
@@ -1717,8 +1604,7 @@ class _$RecipeUnits$ implements RecipeUnits$ {
       required this.mg,
       required this.fe});
 
-  factory _$RecipeUnits$.fromJson(Map<String, dynamic> json) =>
-      _$$RecipeUnits$FromJson(json);
+  factory _$RecipeUnits$.fromJson(Map<String, dynamic> json) => _$$RecipeUnits$FromJson(json);
 
   @override
   final String proteins;
@@ -1767,8 +1653,7 @@ class _$RecipeUnits$ implements RecipeUnits$ {
 
   @JsonKey(ignore: true)
   @override
-  $RecipeUnits$CopyWith<RecipeUnits$> get copyWith =>
-      _$RecipeUnits$CopyWithImpl<RecipeUnits$>(this, _$identity);
+  $RecipeUnits$CopyWith<RecipeUnits$> get copyWith => _$RecipeUnits$CopyWithImpl<RecipeUnits$>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1786,8 +1671,7 @@ abstract class RecipeUnits$ implements RecipeUnits {
       required String mg,
       required String fe}) = _$RecipeUnits$;
 
-  factory RecipeUnits$.fromJson(Map<String, dynamic> json) =
-      _$RecipeUnits$.fromJson;
+  factory RecipeUnits$.fromJson(Map<String, dynamic> json) = _$RecipeUnits$.fromJson;
 
   @override
   String get proteins;
@@ -1805,8 +1689,7 @@ abstract class RecipeUnits$ implements RecipeUnits {
   String get fe;
   @override
   @JsonKey(ignore: true)
-  $RecipeUnits$CopyWith<RecipeUnits$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeUnits$CopyWith<RecipeUnits$> get copyWith => throw _privateConstructorUsedError;
 }
 
 RecipeNutrients _$RecipeNutrientsFromJson(Map<String, dynamic> json) {
@@ -1853,21 +1736,18 @@ mixin _$RecipeNutrients {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecipeNutrientsCopyWith<RecipeNutrients> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeNutrientsCopyWith<RecipeNutrients> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecipeNutrientsCopyWith<$Res> {
-  factory $RecipeNutrientsCopyWith(
-          RecipeNutrients value, $Res Function(RecipeNutrients) then) =
+  factory $RecipeNutrientsCopyWith(RecipeNutrients value, $Res Function(RecipeNutrients) then) =
       _$RecipeNutrientsCopyWithImpl<$Res>;
   $Res call({int proteins, int carbs, int fats, int ca, int mg, int fe});
 }
 
 /// @nodoc
-class _$RecipeNutrientsCopyWithImpl<$Res>
-    implements $RecipeNutrientsCopyWith<$Res> {
+class _$RecipeNutrientsCopyWithImpl<$Res> implements $RecipeNutrientsCopyWith<$Res> {
   _$RecipeNutrientsCopyWithImpl(this._value, this._then);
 
   final RecipeNutrients _value;
@@ -1913,21 +1793,17 @@ class _$RecipeNutrientsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class $RecipeNutrients$CopyWith<$Res>
-    implements $RecipeNutrientsCopyWith<$Res> {
-  factory $RecipeNutrients$CopyWith(
-          RecipeNutrients$ value, $Res Function(RecipeNutrients$) then) =
+abstract class $RecipeNutrients$CopyWith<$Res> implements $RecipeNutrientsCopyWith<$Res> {
+  factory $RecipeNutrients$CopyWith(RecipeNutrients$ value, $Res Function(RecipeNutrients$) then) =
       _$RecipeNutrients$CopyWithImpl<$Res>;
   @override
   $Res call({int proteins, int carbs, int fats, int ca, int mg, int fe});
 }
 
 /// @nodoc
-class _$RecipeNutrients$CopyWithImpl<$Res>
-    extends _$RecipeNutrientsCopyWithImpl<$Res>
+class _$RecipeNutrients$CopyWithImpl<$Res> extends _$RecipeNutrientsCopyWithImpl<$Res>
     implements $RecipeNutrients$CopyWith<$Res> {
-  _$RecipeNutrients$CopyWithImpl(
-      RecipeNutrients$ _value, $Res Function(RecipeNutrients$) _then)
+  _$RecipeNutrients$CopyWithImpl(RecipeNutrients$ _value, $Res Function(RecipeNutrients$) _then)
       : super(_value, (v) => _then(v as RecipeNutrients$));
 
   @override
@@ -1982,8 +1858,7 @@ class _$RecipeNutrients$ implements RecipeNutrients$ {
       required this.mg,
       required this.fe});
 
-  factory _$RecipeNutrients$.fromJson(Map<String, dynamic> json) =>
-      _$$RecipeNutrients$FromJson(json);
+  factory _$RecipeNutrients$.fromJson(Map<String, dynamic> json) => _$$RecipeNutrients$FromJson(json);
 
   @override
   final int proteins;
@@ -2046,8 +1921,7 @@ abstract class RecipeNutrients$ implements RecipeNutrients {
       required int mg,
       required int fe}) = _$RecipeNutrients$;
 
-  factory RecipeNutrients$.fromJson(Map<String, dynamic> json) =
-      _$RecipeNutrients$.fromJson;
+  factory RecipeNutrients$.fromJson(Map<String, dynamic> json) = _$RecipeNutrients$.fromJson;
 
   @override
   int get proteins;
@@ -2063,8 +1937,7 @@ abstract class RecipeNutrients$ implements RecipeNutrients {
   int get fe;
   @override
   @JsonKey(ignore: true)
-  $RecipeNutrients$CopyWith<RecipeNutrients$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipeNutrients$CopyWith<RecipeNutrients$> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2086,14 +1959,12 @@ mixin _$RecipesState {
   Map<String, Recipe> get recipes => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $RecipesStateCopyWith<RecipesState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipesStateCopyWith<RecipesState> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecipesStateCopyWith<$Res> {
-  factory $RecipesStateCopyWith(
-          RecipesState value, $Res Function(RecipesState) then) =
+  factory $RecipesStateCopyWith(RecipesState value, $Res Function(RecipesState) then) =
       _$RecipesStateCopyWithImpl<$Res>;
   $Res call({Map<String, Recipe> recipes});
 }
@@ -2120,10 +1991,8 @@ class _$RecipesStateCopyWithImpl<$Res> implements $RecipesStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class $RecipesState$CopyWith<$Res>
-    implements $RecipesStateCopyWith<$Res> {
-  factory $RecipesState$CopyWith(
-          RecipesState$ value, $Res Function(RecipesState$) then) =
+abstract class $RecipesState$CopyWith<$Res> implements $RecipesStateCopyWith<$Res> {
+  factory $RecipesState$CopyWith(RecipesState$ value, $Res Function(RecipesState$) then) =
       _$RecipesState$CopyWithImpl<$Res>;
   @override
   $Res call({Map<String, Recipe> recipes});
@@ -2132,8 +2001,7 @@ abstract class $RecipesState$CopyWith<$Res>
 /// @nodoc
 class _$RecipesState$CopyWithImpl<$Res> extends _$RecipesStateCopyWithImpl<$Res>
     implements $RecipesState$CopyWith<$Res> {
-  _$RecipesState$CopyWithImpl(
-      RecipesState$ _value, $Res Function(RecipesState$) _then)
+  _$RecipesState$CopyWithImpl(RecipesState$ _value, $Res Function(RecipesState$) _then)
       : super(_value, (v) => _then(v as RecipesState$));
 
   @override
@@ -2175,13 +2043,11 @@ class _$RecipesState$ implements RecipesState$ {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(recipes));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(recipes));
 
   @JsonKey(ignore: true)
   @override
-  $RecipesState$CopyWith<RecipesState$> get copyWith =>
-      _$RecipesState$CopyWithImpl<RecipesState$>(this, _$identity);
+  $RecipesState$CopyWith<RecipesState$> get copyWith => _$RecipesState$CopyWithImpl<RecipesState$>(this, _$identity);
 }
 
 abstract class RecipesState$ implements RecipesState {
@@ -2191,6 +2057,5 @@ abstract class RecipesState$ implements RecipesState {
   Map<String, Recipe> get recipes;
   @override
   @JsonKey(ignore: true)
-  $RecipesState$CopyWith<RecipesState$> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecipesState$CopyWith<RecipesState$> get copyWith => throw _privateConstructorUsedError;
 }

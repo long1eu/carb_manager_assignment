@@ -1,0 +1,24 @@
+name: feature
+on:
+  push:
+
+jobs:
+  quality-assurance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install flutter
+        uses: subosito/flutter-action@v1
+        with:
+          channel: stable
+
+      - name: Setup flutter project
+        run: flutter pub get
+
+      - name: Analyze flutter package
+        run: flutter analyze
+
+      - name: Check format
+        run: flutter format -l 120 --set-exit-if-changed ./lib
