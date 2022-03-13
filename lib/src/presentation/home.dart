@@ -1,7 +1,7 @@
 import 'package:carb_manager_assignment/src/actions/index.dart';
 import 'package:carb_manager_assignment/src/containers/index.dart';
 import 'package:carb_manager_assignment/src/models/index.dart';
-import 'package:carb_manager_assignment/src/presentation/recipe_item.dart';
+import 'package:carb_manager_assignment/src/presentation/recipe/recipe_item.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

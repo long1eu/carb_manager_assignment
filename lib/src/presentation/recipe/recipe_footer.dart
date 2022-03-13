@@ -1,4 +1,6 @@
 import 'package:carb_manager_assignment/src/models/index.dart';
+import 'package:carb_manager_assignment/src/presentation/recipe/recipe_info.dart';
+import 'package:carb_manager_assignment/src/presentation/recipe/recipe_rating.dart';
 import 'package:flutter/material.dart';
 
 class RecipeFooter extends StatelessWidget {
@@ -13,8 +15,6 @@ class RecipeFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: const BoxConstraints(
-        minHeight: 100.0,
-        maxHeight: 100.0,
         minWidth: 343.0,
         maxWidth: 500.0,
       ),
@@ -32,6 +32,15 @@ class RecipeFooter extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF0C0C0A),
               ),
+            ),
+            const SizedBox(height: 16.0),
+            RecipeRating(
+              rating: recipe.rating,
+            ),
+            const SizedBox(height: 8.0),
+            RecipeInfo(
+              details: recipe.details,
+              preparationTime: recipe.preparationTime,
             ),
           ],
         ),

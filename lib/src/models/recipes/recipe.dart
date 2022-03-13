@@ -12,13 +12,23 @@ class Recipe with _$Recipe implements Comparable<Recipe> {
     required List<RecipeImage> images,
     required Rating rating,
     required RecipeDetails details,
-    required num preparationTimeMinutes,
+    required int preparationTimeMinutes,
     @Default(false) bool isLiked,
   }) = Recipe$;
 
   factory Recipe.fromJson(Map<dynamic, dynamic> json) => _$RecipeFromJson(Map<String, dynamic>.from(json));
 
   const Recipe._();
+
+  String get preparationTime {
+    final int hours = preparationTimeMinutes ~/ 60;
+    final int minutes = preparationTimeMinutes - hours * 60;
+
+    return <String>[
+      if (hours != 0) '$hours hr',
+      '$minutes min',
+    ].join(' ');
+  }
 
   @override
   int compareTo(Recipe other) {
@@ -51,7 +61,7 @@ class RecipeDetails with _$RecipeDetails {
   const factory RecipeDetails({
     required RecipeUnits units,
     required RecipeNutrients nutrients,
-    @JsonKey(name: 'energy') required int energyValue,
+    required int energy,
   }) = RecipeDetails$;
 
   factory RecipeDetails.fromJson(Map<dynamic, dynamic> json) =>
@@ -65,13 +75,34 @@ class RecipeDetails with _$RecipeDetails {
 
   String get fats => '${nutrients.fats} ${units.fats}';
 
-  String get energy => '$energyValue ${units.energy}';
-
   String get ca => '${nutrients.ca} ${units.ca}';
 
   String get mg => '${nutrients.mg} ${units.mg}';
 
   String get fe => '${nutrients.fe} ${units.fe}';
+
+  int getEnergy(EnergyUnits unit) {
+    if (unit == EnergyUnits.calories) {
+      if (units.energy == 'kJ') {
+        return (energy / 4.184).round();
+      } else {
+        assert(units.energy == 'kcal');
+        return energy;
+      }
+    } else if (units.energy == 'kJ') {
+      return energy;
+    } else {
+      assert(units.energy == 'kcal');
+      return (energy * 4.184).round();
+    }
+  }
+
+  String getEnergyLabel(EnergyUnits unit) {
+    final int energy = getEnergy(unit);
+    final String um = unit == EnergyUnits.calories ? 'kcal' : 'kJ';
+
+    return '$energy $um';
+  }
 }
 
 @freezed

@@ -1,6 +1,6 @@
 import 'package:carb_manager_assignment/src/models/index.dart';
-import 'package:carb_manager_assignment/src/presentation/recipe_footer.dart';
-import 'package:carb_manager_assignment/src/presentation/recipe_header.dart';
+import 'package:carb_manager_assignment/src/presentation/recipe/recipe_footer.dart';
+import 'package:carb_manager_assignment/src/presentation/recipe/recipe_header.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

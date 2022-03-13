@@ -5,6 +5,7 @@ import 'package:carb_manager_assignment/src/presentation/home.dart';
 import 'package:carb_manager_assignment/src/presentation/mixin/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,20 +37,25 @@ class _MyAppState extends State<MyApp> with ErrorActionMixin, ErrorDialogMixin {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData theme = ThemeData(
+      appBarTheme: AppBarTheme(
+        elevation: 1.0,
+        color: Colors.white,
+        titleTextStyle: GoogleFonts.lato(
+          color: Colors.blue,
+          fontSize: 16.0,
+        ),
+      ),
+      scaffoldBackgroundColor: Colors.white,
+    );
+
     return StoreProvider<AppState>(
       store: widget.result.store,
       child: MaterialApp(
         navigatorKey: _key,
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-            elevation: 0.0,
-            color: Colors.white,
-            titleTextStyle: TextStyle(
-              color: Colors.blue,
-            ),
-          ),
-          scaffoldBackgroundColor: Colors.white,
+        theme: theme.copyWith(
+          textTheme: GoogleFonts.latoTextTheme(theme.textTheme),
         ),
         home: const HomePage(),
       ),
