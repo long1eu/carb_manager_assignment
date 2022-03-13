@@ -13,8 +13,7 @@ _$AppUser$ _$$AppUser$FromJson(Map<String, dynamic> json) => _$AppUser$(
       energyUnits: $enumDecode(_$EnergyUnitsEnumMap, json['energyUnits']),
     );
 
-Map<String, dynamic> _$$AppUser$ToJson(_$AppUser$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$AppUser$ToJson(_$AppUser$ instance) => <String, dynamic>{
       'firstName': instance.firstName,
       'lastName': instance.lastName,
       'email': instance.email,
@@ -33,9 +32,7 @@ _$Recipe$ _$$Recipe$FromJson(Map<String, dynamic> json) => _$Recipe$(
       isDeleted: json['isDeleted'] as bool,
       status: json['status'] as String,
       title: json['title'] as String,
-      images: (json['images'] as List<dynamic>)
-          .map((e) => RecipeImage.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      images: (json['images'] as List<dynamic>).map((e) => RecipeImage.fromJson(e as Map<String, dynamic>)).toList(),
       rating: Rating.fromJson(json['rating'] as Map<String, dynamic>),
       details: RecipeDetails.fromJson(json['details'] as Map<String, dynamic>),
       preparationTimeMinutes: json['preparationTimeMinutes'] as int,
@@ -56,14 +53,12 @@ Map<String, dynamic> _$$Recipe$ToJson(_$Recipe$ instance) => <String, dynamic>{
       'isLiked': instance.isLiked,
     };
 
-_$RecipeImage$ _$$RecipeImage$FromJson(Map<String, dynamic> json) =>
-    _$RecipeImage$(
+_$RecipeImage$ _$$RecipeImage$FromJson(Map<String, dynamic> json) => _$RecipeImage$(
       id: json['id'] as String,
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$RecipeImage$ToJson(_$RecipeImage$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$RecipeImage$ToJson(_$RecipeImage$ instance) => <String, dynamic>{
       'id': instance.id,
       'url': instance.url,
     };
@@ -78,23 +73,19 @@ Map<String, dynamic> _$$Rating$ToJson(_$Rating$ instance) => <String, dynamic>{
       'score': instance.score,
     };
 
-_$RecipeDetails$ _$$RecipeDetails$FromJson(Map<String, dynamic> json) =>
-    _$RecipeDetails$(
+_$RecipeDetails$ _$$RecipeDetails$FromJson(Map<String, dynamic> json) => _$RecipeDetails$(
       units: RecipeUnits.fromJson(json['units'] as Map<String, dynamic>),
-      nutrients:
-          RecipeNutrients.fromJson(json['nutrients'] as Map<String, dynamic>),
+      nutrients: RecipeNutrients.fromJson(json['nutrients'] as Map<String, dynamic>),
       energy: json['energy'] as int,
     );
 
-Map<String, dynamic> _$$RecipeDetails$ToJson(_$RecipeDetails$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$RecipeDetails$ToJson(_$RecipeDetails$ instance) => <String, dynamic>{
       'units': instance.units,
       'nutrients': instance.nutrients,
       'energy': instance.energy,
     };
 
-_$RecipeUnits$ _$$RecipeUnits$FromJson(Map<String, dynamic> json) =>
-    _$RecipeUnits$(
+_$RecipeUnits$ _$$RecipeUnits$FromJson(Map<String, dynamic> json) => _$RecipeUnits$(
       proteins: json['proteins'] as String,
       carbs: json['carbs'] as String,
       fats: json['fats'] as String,
@@ -104,8 +95,7 @@ _$RecipeUnits$ _$$RecipeUnits$FromJson(Map<String, dynamic> json) =>
       fe: json['fe'] as String,
     );
 
-Map<String, dynamic> _$$RecipeUnits$ToJson(_$RecipeUnits$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$RecipeUnits$ToJson(_$RecipeUnits$ instance) => <String, dynamic>{
       'proteins': instance.proteins,
       'carbs': instance.carbs,
       'fats': instance.fats,
@@ -115,8 +105,7 @@ Map<String, dynamic> _$$RecipeUnits$ToJson(_$RecipeUnits$ instance) =>
       'fe': instance.fe,
     };
 
-_$RecipeNutrients$ _$$RecipeNutrients$FromJson(Map<String, dynamic> json) =>
-    _$RecipeNutrients$(
+_$RecipeNutrients$ _$$RecipeNutrients$FromJson(Map<String, dynamic> json) => _$RecipeNutrients$(
       proteins: json['proteins'] as int,
       carbs: json['carbs'] as int,
       fats: json['fats'] as int,
@@ -125,8 +114,7 @@ _$RecipeNutrients$ _$$RecipeNutrients$FromJson(Map<String, dynamic> json) =>
       fe: json['fe'] as int,
     );
 
-Map<String, dynamic> _$$RecipeNutrients$ToJson(_$RecipeNutrients$ instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$RecipeNutrients$ToJson(_$RecipeNutrients$ instance) => <String, dynamic>{
       'proteins': instance.proteins,
       'carbs': instance.carbs,
       'fats': instance.fats,

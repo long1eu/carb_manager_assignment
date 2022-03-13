@@ -10,8 +10,7 @@ class RecipesApi {
 
   Future<List<Recipe>> listRecipes() async {
     final List<Recipe> recipes = await _client.listRecipes();
-    
-    
+
     print(jsonEncode(recipes.first.toJson()));
     return recipes;
   }
